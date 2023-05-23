@@ -54,6 +54,16 @@ permissions:
   actions: write
 
 
+workflow_dispatch: # Allow the workflow to be triggered manually
+
+env:
+  SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
+  SF_DATABASE: ${{ secrets.SF_DATABASE }}
+  SF_PASSWORD: ${{ secrets.SF_PASSWORD }}
+  SF_USER: ${{ secrets.SF_USER }}
+  SF_ROLE: ${{ secrets.SF_ROLE }}
+  SF_SCHEMA: ${{ secrets.SF_SCHEMA }}
+  SF_WAREHOUSE: ${{secrets.SF_WAREHOUSE}}
 
 jobs:
   terraform:
