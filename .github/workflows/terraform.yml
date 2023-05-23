@@ -54,7 +54,7 @@ permissions:
   actions: write
 
 
-workflow_dispatch: # Allow the workflow to be triggered manually
+
 
 env:
   SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
