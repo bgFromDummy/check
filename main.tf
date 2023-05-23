@@ -8,7 +8,17 @@ resource "local_sensitive_file" "foo1" {
   filename = "${path.module}/foo1.bar"
 }
 
+resource "snowflake_table" "raw_table_4" {
+  database            = snowflake_database.db.name
+  schema              = snowflake_schema.schema.name
+  name                = "Order_Summary_1"
+  comment             = "This is a RAW Order_Summary Table"
 
+  column {
+    name     = "Custkey"
+    type     = "NUMBER(38,0)"
+  }
+  
 resource "snowflake_table" "raw_table_4" {
   database            = snowflake_database.db.name
   schema              = snowflake_schema.schema.name
